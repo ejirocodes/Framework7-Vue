@@ -5,6 +5,7 @@ import DynamicRoutePage from './assets/vue/pages/dynamic-route.vue';
 import Onboarding1 from './assets/vue/components/onboarding1.vue'
 import Onboarding2 from './assets/vue/components/onboarding2.vue'
 import Onboarding3 from './assets/vue/components/onboarding3.vue'
+import Homepage from './assets/vue/pages/homepage.vue'
 
 import PanelLeftPage from './assets/vue/pages/panel-left.vue';
 import ColorThemes from './assets/vue/pages/color-themes.vue';
@@ -27,6 +28,10 @@ export default [
   {
     path: '/onboarding3/',
     component: Onboarding3
+  },
+  {
+    path: '/home/',
+    component: Homepage
   },
   {
     path: '/about/',
