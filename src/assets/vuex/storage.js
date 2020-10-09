@@ -5,7 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    user: {}
+    user: {},
+    product: {},
+    cart: []
   },
 
   actions: {
@@ -17,6 +19,12 @@ export default new Vuex.Store({
   mutations: {
     USER_LOGGED (state, user) {
       state.user = user;
+    },
+    UPDATE_PRODUCT(state, payload) {
+      state.product = payload;
+    },
+     ADD_TO_CART(state, product) {
+      state.cart.push(product);
     }
   },
 });

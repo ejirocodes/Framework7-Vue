@@ -1,0 +1,5 @@
+:root {
+    --f7-theme-color: #fe724c;
+    --f7-theme-color-rgb: rgb(254, 114, 76);
+    --f7-button-fill-pressed-bg-color: var(--f7-theme-color);
+}
