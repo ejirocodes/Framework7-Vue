@@ -55,7 +55,7 @@
       </f7-block>
       <div class="checkout-sheet" v-if="cart.length > 0">
         <p>
-          <f7-button fill sheet-open=".demo-sheet-swipe-to-step"
+          <f7-button fill large sheet-open=".demo-sheet-swipe-to-step"
             >Checkout</f7-button
           >
         </p>
@@ -72,10 +72,14 @@
               class="display-flex padding justify-content-space-between align-items-center"
             >
               <div style="font-size: 18px"><b>Total:</b></div>
-              <div style="font-size: 22px"><b>${{totalCost}}</b></div>
+              <div style="font-size: 22px">
+                <b>${{ totalCost }}</b>
+              </div>
             </div>
             <div class="padding-horizontal padding-bottom">
-              <f7-button large fill>Make Payment</f7-button>
+              <f7-button large fill @click="showPreloader()"
+                >Make Payment</f7-button
+              >
               <div class="margin-top text-align-center">
                 Swipe up for more details
               </div>
@@ -84,8 +88,12 @@
           <!-- Rest of the sheet content that will opened with swipe -->
           <f7-block-title medium class="margin-top">Your order:</f7-block-title>
           <f7-list no-hairlines>
-            <f7-list-item v-for="(item, i) in cart" :key="i" :title="item .title">
-              <b slot="after" class="text-color-black">${{item.cost}}</b>
+            <f7-list-item
+              v-for="(item, i) in cart"
+              :key="i"
+              :title="item.title"
+            >
+              <b slot="after" class="text-color-black">${{ item.cost }}</b>
             </f7-list-item>
           </f7-list>
         </f7-sheet>
@@ -102,8 +110,17 @@ export default {
     },
     totalCost() {
       return this.cart.reduce(
-        (a, b) => b["cost"] + (a["cost"] ? a["cost"] : a)
+        (accumulator, current) => accumulator + current.cost,
+        0
       );
+    },
+  },
+  methods: {
+    showPreloader() {
+      this.$f7.preloader.show();
+      setTimeout(() => {
+        this.$f7.preloader.hide();
+      }, 3000);
     },
   },
 };

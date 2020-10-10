@@ -42,7 +42,6 @@ export default {
       this.UPDATE_PRODUCT(product);
     },
     addToBag(product) {
-      console.log("cart");
       this.$store.commit("ADD_TO_CART", Object.assign({}, product));
       this.$f7.toast.show({
         text: `${product.title} has been added to cart`,

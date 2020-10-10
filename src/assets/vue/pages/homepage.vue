@@ -35,25 +35,8 @@ export default {
   data() {
     return {
       products: [
-        {
+         {
           id: 0,
-          description:
-            "Kingsons wholesale custom logo men back pack backpack bag notebook bags usb charging business laptop backpack",
-          title: "Back Pack Bag",
-          cover:
-            "https://sc01.alicdn.com/kf/H758934dd506e41b9a2ff37a6026f32bbv.jpg",
-          cost: 15.5,
-        },
-        {
-          id: 1,
-          description:
-            "Magic Laptop Bags Backpack Back Pack Men Black Backpack USB",
-          title: "Magic Laptop Bag",
-          cover: "https://sc02.alicdn.com/kf/HTB1xCw.aOHrK1Rjy0Flq6AsaFXaB.jpg",
-          cost: 13.5,
-        },
-        {
-          id: 2,
           description:
             "African Black Girl Bags School Drawstring Flip Side Pocket Mochilas Escolares Female Back Pack",
           title: "African Black Girl Bags",
@@ -62,13 +45,30 @@ export default {
           cost: 8.5,
         },
         {
-          id: 3,
+          id: 1,
           description:
             "African Black Girl Bags School Drawstring Flip Side Pocket Mochilas Escolares Female Back Pack",
           title: "African Black Girl Bags",
           cover:
             "https://sc01.alicdn.com/kf/H2d5c88f58ca5459c9726d43597ce827dh.jpg",
           cost: 10.5,
+        },
+        {
+          id: 2,
+          description:
+            "Kingsons wholesale custom logo men back pack backpack bag notebook bags usb charging business laptop backpack",
+          title: "Back Pack Bag",
+          cover:
+            "https://sc01.alicdn.com/kf/H758934dd506e41b9a2ff37a6026f32bbv.jpg",
+          cost: 15.5,
+        },
+        {
+          id: 3,
+          description:
+            "Magic Laptop Bags Backpack Back Pack Men Black Backpack USB",
+          title: "Magic Laptop Bag",
+          cover: "https://sc02.alicdn.com/kf/HTB1xCw.aOHrK1Rjy0Flq6AsaFXaB.jpg",
+          cost: 13.5,
         },
       ],
     };
