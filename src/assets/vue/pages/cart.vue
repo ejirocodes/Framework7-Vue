@@ -50,7 +50,7 @@
         <div>
           <img :src="item.cover" :alt="item.title" class="width-100" />
           <p class="heading-2">{{ item.title }}</p>
-          <p class="p-1">{{ item.cost }}</p>
+          <p class="p-1">${{ item.cost }}</p>
         </div>
       </f7-block>
       <div class="checkout-sheet" v-if="cart.length > 0">

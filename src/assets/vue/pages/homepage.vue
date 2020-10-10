@@ -7,7 +7,7 @@
         <span class="tabbar-label">Cart</span>
       </f7-link>
     </f7-toolbar>
-    <f7-tabs animated swipable>
+    <f7-tabs animated swipeable>
       <f7-tab id="tab-1" class="page-content" tab-active>
         <f7-block>
         <h1 class="heading-2 margin-bottom">DopeKart</h1>
