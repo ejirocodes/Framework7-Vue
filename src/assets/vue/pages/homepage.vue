@@ -2,30 +2,35 @@
   <f7-page>
     <f7-toolbar tabbar bottom>
       <f7-link tab-link="#tab-1" tab-link-active>Home</f7-link>
-      <f7-link tab-link="#tab-2">Cart</f7-link>
+      <f7-link tab-link="#tab-2">
+        <f7-badge color="red">{{ cartItems }}</f7-badge>
+        <span class="tabbar-label">Cart</span>
+      </f7-link>
     </f7-toolbar>
     <f7-tabs animated swipable>
       <f7-tab id="tab-1" class="page-content" tab-active>
         <f7-block>
+        <h1 class="heading-2 margin-bottom">DopeKart</h1>
           <div class="product-container">
-            <cartItem :products="products" />
+            <CartItem :products="products" />
           </div>
         </f7-block>
       </f7-tab>
       <f7-tab id="tab-2" class="page-content">
-        <f7-block>
-          <f7-link href="/cart/">Cart</f7-link>
-          ...
-        </f7-block>   
-      </f7-tab>   
+        <f7-link href="/cart/">Cart </f7-link>
+        <Cart />
+      </f7-tab>
     </f7-tabs>
   </f7-page>
 </template>
 <script>
-import cartItem from "../components/cartItem";
+import CartItem from "../components/cartItem";
+import Cart from "./cart";
+import { mapGetters } from "vuex";
 export default {
   components: {
-    cartItem,
+    CartItem,
+    Cart,
   },
   data() {
     return {
@@ -67,6 +72,9 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    ...mapGetters(["cartItems"]),
   },
 };
 </script>

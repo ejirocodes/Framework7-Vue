@@ -41,7 +41,7 @@
           Back
         </f7-link>
         <f7-link href="/cart/">
-          <span>{{ cart.length }}</span>
+          <span>{{ cartItems }}</span>
           <svg
             version="1.1"
             width="2rem"
@@ -105,19 +105,19 @@
 </template>
 
   <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 export default {
   computed: {
     ...mapState(["product", "cart"]),
+    ...mapGetters(["cartItems"]),
   },
   methods: {
     addToBag() {
       this.$store.commit("ADD_TO_CART", Object.assign({}, this.product));
-      this.$f7.toast.create({
-      text: `${this.product.title} has been added to cart`,
-      closeTimeout: 5000
-    }).open();
-    //   this.$f7.toast.show(``, 'bottom', 2000);
+      this.$f7.toast.show({
+        text: `${this.product.title} has been added to cart`,
+        closeTimeout: 2000,
+      });
     },
   },
 };

@@ -15,7 +15,11 @@ export default new Vuex.Store({
       commit('USER_LOGGED', user);
     }
   },
-
+  getters: {
+      cartItems: state => {
+      return state.cart.length;
+    }
+  },
   mutations: {
     USER_LOGGED (state, user) {
       state.user = user;

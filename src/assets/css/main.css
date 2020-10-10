@@ -2,4 +2,13 @@
     --f7-theme-color: #fe724c;
     --f7-theme-color-rgb: rgb(254, 114, 76);
     --f7-button-fill-pressed-bg-color: var(--f7-theme-color);
+     --f7-toast-bg-color: var(--f7-theme-color);
 }
+
+.ios {
+  --f7-toast-bg-color: rgba(254, 114, 76, 0.75);
+  --f7-toast-bg-color-rgb: 254, 114, 7;
+  }
+  .md {
+  --f7-toast-bg-color: var(--f7-theme-color)
+  }
