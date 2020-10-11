@@ -44,32 +44,32 @@ export default [
     path: '/cart/',
     component: Cart
   },
-  {
-    path: '/about/',
-    component: AboutPage
-  },
-  {
-    path: '/form/',
-    component: FormPage
-  },
-  {
-    path: '/dynamic-route/blog/:blogId/post/:postId/',
-    component: DynamicRoutePage
-  },
-  {
-    path: '/panel-left/',
-    component: PanelLeftPage
-  },
-  {
-    path: '/color-themes/',
-    component: ColorThemes
-  },
-  {
-    path: '/chat/',
-    component: Chat
-  },
-  {
-    path: '/vuex/',
-    component: Vuex
-  },
+  // {
+  //   path: '/about/',
+  //   component: AboutPage
+  // },
+  // {
+  //   path: '/form/',
+  //   component: FormPage
+  // },
+  // {
+  //   path: '/dynamic-route/blog/:blogId/post/:postId/',
+  //   component: DynamicRoutePage
+  // },
+  // {
+  //   path: '/panel-left/',
+  //   component: PanelLeftPage
+  // },
+  // {
+  //   path: '/color-themes/',
+  //   component: ColorThemes
+  // },
+  // {
+  //   path: '/chat/',
+  //   component: Chat
+  // },
+  // {
+  //   path: '/vuex/',
+  //   component: Vuex
+  // },
 ];

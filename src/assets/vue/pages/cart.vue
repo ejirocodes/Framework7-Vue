@@ -120,6 +120,11 @@ export default {
       this.$f7.preloader.show();
       setTimeout(() => {
         this.$f7.preloader.hide();
+         this.$f7.toast.show({
+        text: `Payment Successful`,
+        position: "top",
+        closeTimeout: 2000,
+      })
       }, 3000);
     },
   },
