@@ -15,14 +15,9 @@ import Chat from './assets/vue/pages/chat.vue';
 import Vuex from './assets/vue/pages/vuex.vue';
 
 export default [
-  // {
-  //   path: '/',
-  //   component: Home
-  // },
   {
-    path: '/onboarding1/',
+    path: '/',
     component: Onboarding1,
-    alias: ['/']
   },
   {
     path: '/onboarding2/',
