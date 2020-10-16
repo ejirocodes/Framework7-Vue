@@ -6,4 +6,4 @@ Feel free to clone the repo and play around with it
 
 ## Demo
 
-![Demo]('./src/assets/images/demo.gif')
+![Demo](/src/assets/images/demo.gif)

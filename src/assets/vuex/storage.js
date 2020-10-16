@@ -5,15 +5,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    user: {},
     product: {},
     cart: []
-  },
-
-  actions: {
-    userLogged ({commit}, user) {
-      commit('USER_LOGGED', user);
-    }
   },
   getters: {
       cartItems: state => {
@@ -21,9 +14,6 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    USER_LOGGED (state, user) {
-      state.user = user;
-    },
     UPDATE_PRODUCT(state, payload) {
       state.product = payload;
     },
